@@ -4,6 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>
+  // Mot de passe secret
+  const PASSWORD = "EDV";
+
+  // Demande le mot de passe à l’utilisateur
+  const userPassword = prompt("Veuillez entrer le mot de passe pour accéder à cette page :");
+
+  // Si le mot de passe est incorrect → accès refusé
+  if (userPassword !== PASSWORD) {
+    document.body.innerHTML = "<h1>Accès refusé</h1><p>Mot de passe incorrect.</p>";
+    throw new Error("Accès refusé");
+  }
+</script>
+
 <title>Catalogue L'Éclat de Verre</title>
 <style>
 body {font-family:Arial;background:#f5f5f5;margin:0;padding:0}
